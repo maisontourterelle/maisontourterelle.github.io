@@ -17,21 +17,6 @@
 <meta property="og:site_name" content="Maison Tourterelle">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Maison Tourterelle","description":"Maison d'art de vivre et de création à Noyon. Studio créatif 45m², séjours sur mesure, événements. À 1h de Paris.","url":"https://www.maisontourterelle.fr","address":{"@type":"PostalAddress","addressLocality":"Noyon","postalCode":"60400","addressRegion":"Hauts-de-France","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":"49.5822","longitude":"3.0038"},"sameAs":["https://www.instagram.com/maison.tourterelle"]}
-// ─── LIGHTBOX ───
-function openLB(img) {
-  const overlay = document.getElementById('lbOverlay');
-  const lbImg = document.getElementById('lbImg');
-  lbImg.src = img.src;
-  lbImg.alt = img.alt;
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLB() {
-  document.getElementById('lbOverlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
-
 </script>
 <link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -587,7 +572,7 @@ nav.scrolled .nav-logo-img{opacity:0.95}
             <span class="epill">Cuisine équipée</span><span class="epill">Grand salon</span><span class="epill">Salle à manger</span><span class="epill">Lits superposés</span><span class="epill">Lit double</span><span class="epill">3 canapés-lits</span><span class="epill">Salon bibliothèque</span><span class="epill">Salle de bain</span><span class="epill">2 salles d'eau</span><span class="epill">WC séparé</span><span class="epill">Véranda &amp; jardin</span>
             
           </div>
-          <p class="enote">La maison est entièrement à vous. Je vous remets les clés. Autonomie totale.<br><small style="opacity:0.7">2 nuits minimum.</small></p>
+          <p class="enote">La maison est entièrement à vous. Je vous remets les clés — autonomie totale.<br><small style="opacity:0.7">2 nuits minimum.</small></p>
           <a href="https://form.typeform.com/to/Mel5Ygoe" target="_blank" rel="noopener" class="ecta">Voir les disponibilités →</a>
         </div>
       </div>
@@ -927,5 +912,22 @@ function hform(e){
   <button class="lb-close" onclick="closeLB()" aria-label="Fermer">✕</button>
   <img class="lb-img" id="lbImg" src="" alt="" onclick="event.stopPropagation()">
 </div>
+
+<script>
+// ─── LIGHTBOX ───
+function openLB(img) {
+  var overlay = document.getElementById('lbOverlay');
+  var lbImg = document.getElementById('lbImg');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  document.getElementById('lbOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLB(); });
+</script>
 </body>
 </html>
